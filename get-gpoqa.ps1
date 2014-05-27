@@ -1,21 +1,22 @@
 ﻿<#
 
- Name:		get-gpoqa.ps1
+Name:		get-gpoqa.ps1
 
- Author:	Jonathan Headen
+Author:	Jonathan Headen
 
- Date:		07/01/09
+Date:		07/01/09
 
- Purpose:   For use with GPO delivered software installation.  If a GPO is being updated this script 
-            will provide quality check that the dependent GPOs are suitably linked and that superceded  
-            GPOs are removed 
+Purpose:   	For use with GPO delivered software installation.  If a GPO is being updated this script 
+            	will provide quality check that the dependent GPOs are suitably linked and that superceded  
+            	GPOs are removed 
 
- Comment:	Prompts for a number of GPO friendly names then forms a list of all unique
-		    scopes where these are linked. For each scope a GPO link order report is created.
-		    The first GPO entered is taken to be the primary, a html report of this GPO is exported.
-		    Outputs to a file called <gpoName>.log and <GPO Friendlyname>.html
-		    Enter a single argument of filename to have it read GPO names from a text file.
-            Requires SDM GPO cmdlets to be available
+Comment:	Prompts for a number of GPO friendly names then forms a list of all unique
+		scopes where these are linked. For each scope a GPO link order report is created.
+		The first GPO entered is taken to be the primary, a html report of this GPO is exported.
+		Outputs to a file called <gpoName>.log and <GPO Friendlyname>.html
+		Enter a single argument of filename to have it read GPO names from a text file.
+            
+Dependency:     Requires SDM GPO cmdlets to be available
 		
 #>
 
