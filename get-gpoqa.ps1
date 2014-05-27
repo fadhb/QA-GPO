@@ -227,18 +227,6 @@ if ($dependencygpos.length -gt 0)
 
 
 $uniquepaths=$global:paths |sort-object -unique
-$uniquepaths|%{If ($_ -match "DC=aurtest")
-			{If ($_ -match "OU=Test,DC=aurtest")
-				{[array]$targetous=$targetous + $_}
-			}
-# Unremark the following code to accomodate DEV
-#		ElseIf ($_ -match "DC=aurdev") 
-# 		 	{If ($_ -match "OU=Test,DC=aurDev")
-# 				{[array]$targetous=$targetous + $_}
-#			}
-		Else
-			{[array]$targetous=$targetous + $_}
-		}
 
 Out-file $outputfile -inputobject "" -append
 Out-file $outputfile -inputobject "===================" -append
